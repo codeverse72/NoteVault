@@ -165,7 +165,11 @@ async function renderPage() {
                 pageHTML = await renderHome();
         }
 
-        app.innerHTML = pageHTML + (showNav ? renderBottomNav(activeNav) : '');
+        app.innerHTML = pageHTML + (showNav ? renderBottomNav(activeNav) : '') + `
+            <footer class="app-footer" style="padding: var(--space-8) var(--space-4); text-align: center; color: var(--text-tertiary); font-size: var(--fs-xs); opacity: 0.8;">
+                developed with ❤️ wani shahid
+            </footer>
+        `;
 
         // Init page-specific behavior
         switch (route.page) {

@@ -15,6 +15,10 @@ NoteVault is a professional, community-driven platform for students to share, di
 
 ---
 
+**Developed with ❤️ by wani shahid**
+
+---
+
 ## 🛠️ Tech Stack
 
 ### Frontend
