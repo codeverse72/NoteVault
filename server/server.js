@@ -206,14 +206,8 @@ app.get('/api/stats', (req, res) => {
     res.json({ totalNotes, totalUsers, totalSubjects, totalLikes });
 });
 
-// Initial Seeding from client data (hardcoded simplified version for now)
-const sampleUsers = [
-    { id: 'user_1', name: 'Demo User', username: '@demo', email: 'demo@notevault.com', bio: 'Passionate learner!', avatar_gradient: 'linear-gradient(135deg, #8b5cf6, #06b6d4)', followers: [], following: [], badges: ['first_note'] }
-];
-const sampleNotes = [
-    { id: 'note_1', userId: 'user_1', subject: 'math', classLevel: '11', topic: 'Calculus', title: 'Introduction to Limits', content: 'Understanding limits is key...', views: 42, createdAt: Date.now(), likedBy: [] }
-];
-
+// Initial Seeding from sampleData
+const { sampleUsers, sampleNotes } = require('./sampleData');
 seedInitialData(sampleUsers, sampleNotes);
 
 app.listen(PORT, () => {
